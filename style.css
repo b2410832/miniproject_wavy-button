@@ -1,0 +1,75 @@
+*{
+	position: relative;
+}
+
+html, body{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+
+.wrapper{
+	height: 100%;
+	background-color: #333;
+}
+
+
+.btn{
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 600;
+	border: 1px solid #fff;
+	line-height: 40px;
+	padding: 25px 60px;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	overflow:hidden;
+}
+
+.btn:hover{
+	color:#333;
+}
+
+
+.btn:before{
+	content: "";
+	height: 320px;
+	width: 320px;
+	background-color: #fff;
+	border-radius: 130px;
+
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	animation: wavy 5s infinite linear;
+	transition: all 1s;
+}
+
+@keyframes wavy{
+	0%{
+		transform: translateX(-50%) rotate(0deg);
+
+	}
+	100%{
+		transform: translateX(-50%) rotate(360deg);
+	}
+}
+
+.btn:hover:before{
+	top: 15px;
+}
+
+
+
+
+
+
+
